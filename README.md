@@ -77,7 +77,7 @@
 ```bash
 git clone https://github.com/hengyunabc/xdiamond.git --depth=1
 cd xdiamond/xdiamond-server
-mvn tomcat7:run -DskipTests
+mvn tomcat7:run -DskipTests -Dexec.args="-Dxdiamond.project.profile=product"
 ```
 然后访问 http://localhost:8080/xdiamond-server ，用admin/admin, standard登录
 
@@ -85,7 +85,8 @@ mvn tomcat7:run -DskipTests
 
 ```bash
 cd xdiamond-client-example/
-mvn exec:java -Dexec.mainClass="io.github.xdiamond.example.ClientExampleMain"
+mvn package -DskipTests -Dexec.args="-Dxdiamond.project.profile=product"
+mvn exec:java -DskipTests -Dexec.mainClass="io.github.xdiamond.example.ClientExampleMain"
 ```
 默认是获取product环境的配置，如果想获取dev环境的配置，则可以执行：
 ```bash

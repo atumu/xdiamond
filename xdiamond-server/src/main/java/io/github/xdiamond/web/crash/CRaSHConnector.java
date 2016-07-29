@@ -50,7 +50,7 @@ import com.google.gson.JsonParser;
 /**
  * @author Julien Viet
  * @author hengyunabc
- * 
+ *
  *         增加Token权限检验功能
  * */
 @ServerEndpoint(value = "/crash", configurator = Configurator.class)
