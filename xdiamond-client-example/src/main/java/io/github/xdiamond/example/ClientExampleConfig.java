@@ -26,8 +26,9 @@ public class ClientExampleConfig {
 
   @Override
   public String toString() {
-    return "ClientExampleConfig [memcachedAddress=" + memcachedAddress + ", zookeeperAddress="
-        + zookeeperAddress + "]";
+    return "ClientExampleConfig [" +
+            "memcachedAddress=" + memcachedAddress +
+            ", zookeeperAddress=" + zookeeperAddress + "]";
   }
 
 }
